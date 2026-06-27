@@ -1,78 +1,109 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-    <package name="EcoRide" namespace="/" extends="struts-default">
+    <package name="ecoride" namespace="/" extends="struts-default">
         <action name="homelink">
             <result>home.jsp</result>
         </action>
+        
         <action name="aboutlink">
             <result>about.jsp</result>
         </action>
+        
         <action name="contactlink">
             <result>contact.jsp</result>
         </action>
-        <action name="signuplink">
-            <result>signup.jsp</result>
-        </action>
-        <action name="loginlink">
-            <result>login.jsp</result>
-        </action>
-        <action name="emprequestlink">
-            <result>services.jsp</result>
-        </action>
-        <action name="settingslink">
-            <result>settings.jsp</result>
-        </action>
+        
         <action name="serviceslink">
             <result>services.jsp</result>
         </action>
-        <action name="employeeaccountdeletelink">
-            <result>employeeaccountdelete.jsp</result>
-        </action>
-         <action name="showrecordslink">
-            <result>showrecords.jsp</result>
-        </action>
-         <action name="operatorloginlink">
-            <result>authdashboard.jsp</result>
-        </action>
-        <action name="destroysessionlink">
-            <result>home.jsp</result>
-        </action>
-          <action name="load">
+        
+        <action name="load">
             <result>home.jsp</result>
         </action>
         
+        <action name="emprequest">
+            <result>booking.jsp</result>
+        </action>
+        
+        
+        
+        <action name="settinglink">
+            <result>setting.jsp</result>
+        </action>
+        
+        <action name="empaccdeletelink">
+            <result>empaccdelete.jsp</result>
+        </action>
+        
+        <action name="dashboardlink">
+            <result>empdashboard.jsp</result>
+        </action>
+        
+        <action name="dashboarddlink">
+            <result>authdashboard.jsp</result>
+        </action>
+        
+        <action name="showaccountlink">
+            <result>showaccount.jsp</result>
+        </action>
+        
+        <action name="showbookinglink">
+            <result>showbooking.jsp</result>
+        </action>
+        
+        <action name="authsettinglink">
+            <result>authsetting.jsp</result>
+        </action>
+        
+        <action name="signuplink">
+            <result>signup.jsp</result>
+        </action>
+        
+        <action name="login">
+            <result>login.jsp</result>
+        </action>
+        
+        <action name="authlink">
+            <result>auth.jsp</result>
+        </action>
         
         <action name="signup" class="struts.action.EmployeeActionCode">
             <result name="success">login.jsp</result>
+            <result name="input">signup.jsp</result>
+            <result name="error">signup.jsp</result>
         </action>
         
         <action name="login" class="struts.action.EmployeeActionCode" method="loginLogic">
-            <result name="success">employeedashboard.jsp</result>
+            <result name="success">empdashboard.jsp</result>
             <result name="error">login.jsp</result>
         </action>
-       
-        <action name="operatorlogin" class="struts.action.OperatorActionCode" method="operatorLogin">
+        
+        <action name="authlogin" class="struts.action.AuthActionCode" method="authLogin">
             <result name="success">authdashboard.jsp</result>
             <result name="error">auth.jsp</result>
         </action>
         
         <action name="emprequest" class="struts.action.EmpRequestActionCode">
-            <result name="success">services.jsp</result>
+            <result name="success">booking.jsp</result>
         </action>
         
-        <action name="pwdcode" class="struts.action.EmployeeActionCode" method="changePass">
+        <action name="passcode" class="struts.action.EmployeeActionCode" method="changePass">
             <result name="success">login.jsp</result>
-            <result name="error">settings.jsp</result>
+            <result name="error">setting.jsp</result>
         </action>
-        <action name="employeeaccountdeletecode" class="struts.action.EmployeeActionCode" method="deleteLogic">
+        
+        <action name="authpasscode" class="struts.action.AuthActionCode" method="authPass">
+            <result name="success">auth.jsp</result>
+            <result name="error">authsetting.jsp</result>
+        </action>
+        
+        <action name="accountdeletecode" class="struts.action.EmployeeActionCode" method="deleteLogic">
             <result name="success">home.jsp</result>
-            <result name="error">employeeaccountdelete.jsp</result>
+            <result name="error">empaccdelete.jsp</result>
         </action>
-    </package>  
+    </package>
 </struts>
-
-
