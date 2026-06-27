@@ -1,5 +1,5 @@
-# Use an OpenJDK 8 image to compile the Java source files
-FROM openjdk:8-jdk-slim AS build
+# Use eclipse-temurin 8 image to compile the Java source files
+FROM eclipse-temurin:8-jdk-jammy AS build
 WORKDIR /app
 COPY . .
 
