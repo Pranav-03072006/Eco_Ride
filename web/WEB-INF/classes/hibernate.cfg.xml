@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC
-"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"-//Hiberate/Hibernate Configuration DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
+    
     <session-factory>
-        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mysql</property>
-        <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">root</property>
+        
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <!-- Replace [YOUR_SUPABASE_PASSWORD] with your actual Supabase credentials -->
+        <property name="hibernate.connection.url">jdbc:postgresql://db.httwiaqdeosnbiboszcm.supabase.co:5432/postgres</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">Pranav@31826</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
-        <property name="hibernate.show_sql">true</property>
         <mapping resource="eco/beans/Employee.hbm.xml"/>
         <mapping resource="eco/beans/EmpRequest.hbm.xml"/>
         <mapping resource="eco/beans/Operator.hbm.xml"/>
-       
-        
         
     </session-factory>
+    
 </hibernate-configuration>
-
-
-
-
