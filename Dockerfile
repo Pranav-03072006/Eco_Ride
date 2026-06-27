@@ -25,8 +25,5 @@ COPY --from=build /app/web /usr/local/tomcat/webapps/ROOT
 # Expose the default Tomcat port
 EXPOSE 8080
 
-# Force Java to prefer IPv6 addresses to fix Supabase Direct Connection on Render
-ENV CATALINA_OPTS="-Djava.net.preferIPv6Addresses=true -Djava.net.preferIPv4Stack=false"
-
 # Start Tomcat
 CMD ["catalina.sh", "run"]
