@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping package="eco.beans">   
+    <class name="Employee" table="employeesignup">
+         <id name="id1" column="id1"/>
+        <property name="password" column="password1"/>
+        <property name="dob" column="dateofbirth1"/>
+        <property name="post" column="emppost1"/>
+        <property name="department" column="empdepartment1"/>
+        <property name="gender" column="empgender1"/>
+        <property name="address" column="empaddress1"/>
+        <property name="city" column="empcity1"/>
+        <property name="fNm" column="empname1"/>
+        <property name="mail" column="empmail1"/>
+        <property name="contact" column="empcontact1"/>
+        <property name="photo" column="empphoto1"/>
+        
+    </class>    
+</hibernate-mapping>

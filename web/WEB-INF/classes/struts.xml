@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="EcoRide" namespace="/" extends="struts-default">
+        <action name="homelink">
+            <result>home.jsp</result>
+        </action>
+        <action name="aboutlink">
+            <result>about.jsp</result>
+        </action>
+        <action name="contactlink">
+            <result>contact.jsp</result>
+        </action>
+        <action name="signuplink">
+            <result>signup.jsp</result>
+        </action>
+        <action name="loginlink">
+            <result>login.jsp</result>
+        </action>
+        <action name="emprequestlink">
+            <result>services.jsp</result>
+        </action>
+        <action name="settingslink">
+            <result>settings.jsp</result>
+        </action>
+        <action name="serviceslink">
+            <result>services.jsp</result>
+        </action>
+        <action name="employeeaccountdeletelink">
+            <result>employeeaccountdelete.jsp</result>
+        </action>
+         <action name="showrecordslink">
+            <result>showrecords.jsp</result>
+        </action>
+         <action name="operatorloginlink">
+            <result>authdashboard.jsp</result>
+        </action>
+        <action name="destroysessionlink">
+            <result>home.jsp</result>
+        </action>
+          <action name="load">
+            <result>home.jsp</result>
+        </action>
+        
+        
+        <action name="signup" class="struts.action.EmployeeActionCode">
+            <result name="success">login.jsp</result>
+        </action>
+        
+        <action name="login" class="struts.action.EmployeeActionCode" method="loginLogic">
+            <result name="success">employeedashboard.jsp</result>
+            <result name="error">login.jsp</result>
+        </action>
+       
+        <action name="operatorlogin" class="struts.action.OperatorActionCode" method="operatorLogin">
+            <result name="success">authdashboard.jsp</result>
+            <result name="error">auth.jsp</result>
+        </action>
+        
+        <action name="emprequest" class="struts.action.EmpRequestActionCode">
+            <result name="success">services.jsp</result>
+        </action>
+        
+        <action name="pwdcode" class="struts.action.EmployeeActionCode" method="changePass">
+            <result name="success">login.jsp</result>
+            <result name="error">settings.jsp</result>
+        </action>
+        <action name="employeeaccountdeletecode" class="struts.action.EmployeeActionCode" method="deleteLogic">
+            <result name="success">home.jsp</result>
+            <result name="error">employeeaccountdelete.jsp</result>
+        </action>
+    </package>  
+</struts>
+
+

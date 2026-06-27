@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping package="eco.beans">   
+    <class name="EmpRequest" table="emprequest786">
+        <id name="id">
+            <generator class="native"/>
+        </id>
+        <property name="empmail1"/>
+        <property name="cabtype"/>
+        <property name="sharingchoice"/>
+        <property name="empdestination"/>
+        <property name="amount"/>
+        <property name="date"/>
+        <property name="time"/>
+        
+    </class>    
+</hibernate-mapping>
