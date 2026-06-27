@@ -8,9 +8,9 @@
     <session-factory>
         
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <!-- Replace [YOUR_SUPABASE_PASSWORD] with your actual Supabase credentials -->
-        <property name="hibernate.connection.url">jdbc:postgresql://db.httwiaqdeosnbiboszcm.supabase.co:5432/postgres</property>
-        <property name="hibernate.connection.username">postgres</property>
+        <!-- Using Supabase Connection Pooler (IPv4 compatible for Render) -->
+        <property name="hibernate.connection.url">jdbc:postgresql://aws-0-ap-south-1.pooler.supabase.com:6543/postgres</property>
+        <property name="hibernate.connection.username">postgres.httwiaqdeosnbiboszcm</property>
         <property name="hibernate.connection.password">Pranav@31826</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
