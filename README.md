@@ -47,5 +47,11 @@ To run this project locally, ensure you have the following installed:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/EcoRide.git
+   git clone https://github.com/Pranav-03072006/EcoRide.git
    cd EcoRide
+
+📝 License
+This project is licensed under the 
+
+MIT License
+.
